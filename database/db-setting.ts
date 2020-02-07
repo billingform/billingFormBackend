@@ -1,6 +1,6 @@
 export const firebase = require('firebase');
 firebase.initializeApp({
-    projectId: 'report-3012b'
+    projectId: 'a-billing-form'
 })
 
 export const db = firebase.firestore();
