@@ -1,4 +1,5 @@
 import { router } from "./router/router";
+import { ErrorContent, ErrorContentInstance } from './view-model/error-viewmodel';
 
 const createError = require('http-errors');
 var express = require('express');
@@ -26,7 +27,8 @@ app.use(function (err, req, res, next) {
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
     res.status(err.status || 500);
-    res.json({ message: err.message, error: err });
+    let errorContent: ErrorContent = new ErrorContentInstance(err)
+    res.json(errorContent);
 });
 
 // app.listen(port, () => {
