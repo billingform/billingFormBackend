@@ -14,6 +14,12 @@ class UserController {
         const result = userModel.createAccount(req);
         result.then((response: any) => res.send(response))
     }
+
+    login(req: Request, res: Response) {
+        const result = userModel.login(req)
+        result.then((response: any) => res.send(response))
+    }
+
 }
 
 
