@@ -10,6 +10,7 @@
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
     "firebase": "^7.6.0",
+    "firebase-functions": "^3.0.0",
     "http-errors": "^1.7.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
@@ -25,7 +26,8 @@
     "localStart": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./app.ts ",
     "start": "tsc && node ./dist/app.js",
-    "dev": "ts-node ./app.ts"
+    "dev": "ts-node ./app.ts",
+    "build": "nodemon --exec ./node_modules/.bin/ts-node -- ./app.ts "
   },
   "keywords": [],
   "author": "",

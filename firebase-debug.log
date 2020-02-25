@@ -1,0 +1,47 @@
+[debug] [2020-02-25T01:20:29.142Z] ----------------------------------------------------------------------
+[debug] [2020-02-25T01:20:29.144Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-02-25T01:20:29.144Z] CLI Version:   7.13.1
+[debug] [2020-02-25T01:20:29.144Z] Platform:      win32
+[debug] [2020-02-25T01:20:29.144Z] Node Version:  v11.11.0
+[debug] [2020-02-25T01:20:29.145Z] Time:          Tue Feb 25 2020 09:20:29 GMT+0800 (GMT+08:00)
+[debug] [2020-02-25T01:20:29.145Z] ----------------------------------------------------------------------
+[debug] [2020-02-25T01:20:29.145Z] 
+[debug] [2020-02-25T01:20:29.153Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-25T01:20:29.153Z] > authorizing via signed-in user
+[debug] [2020-02-25T01:20:29.153Z] [iam] checking project a-billing-form for permissions ["firebase.projects.get"]
+[debug] [2020-02-25T01:20:29.155Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/a-billing-form:testIamPermissions  
+
+[debug] [2020-02-25T01:20:30.556Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-25T01:20:30.558Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/a-billing-form  
+ 
+[debug] [2020-02-25T01:20:33.837Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\billingFormBackend'...
+[info] 
+[info] +  functions: Using node@11 from host.
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\billingFormBackend\functions" for Cloud Functions...
+[debug] [2020-02-25T01:20:35.900Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-25T01:20:35.900Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-25T01:20:35.900Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-25T01:20:35.901Z] [worker-~diagnostic~-72c0fb48-abf2-431f-a837-f5b893c9910c]: Assigning socketPath: \\?\pipe\C:\billingFormBackend\functions\22084
+[debug] [2020-02-25T01:20:35.901Z] [worker-~diagnostic~-72c0fb48-abf2-431f-a837-f5b893c9910c]: BUSY
+[debug] [2020-02-25T01:20:36.272Z] [runtime-status] [22084] Functions runtime initialized. {"cwd":"C:\\billingFormBackend\\functions","node_version":"11.11.0"}
+[debug] [2020-02-25T01:20:36.274Z] [runtime-status] [22084] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-25T01:20:36.279Z] [runtime-status] [22084] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"C:\\billingFormBackend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-02-25T01:20:36.281Z] [runtime-status] [22084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\billingFormBackend\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-02-25T01:20:36.281Z] [runtime-status] [22084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\billingFormBackend\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'C:\billingFormBackend\functions'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:649:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:575:25)
+    at Module.require (internal/modules/cjs/loader.js:705:19)
+    at require (internal/modules/cjs/helpers.js:14:16)
+    at C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:719:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:5:58)
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-02-25T01:20:36.332Z] [worker-~diagnostic~-72c0fb48-abf2-431f-a837-f5b893c9910c]: exited
+[debug] [2020-02-25T01:20:36.332Z] [worker-~diagnostic~-72c0fb48-abf2-431f-a837-f5b893c9910c]: FINISHED
