@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { settingModel } from "../model/setting.model";
-import { ItemsSetting, CompanySetting } from "../view-model/setting-view-model";
+import { ItemsSetting, CompanySetting, Menu } from "../view-model/setting-view-model";
 
 
 export class SettingController {
@@ -12,7 +12,7 @@ export class SettingController {
      */
     getItemSetting(req: Request, res: Response) {
         const result = settingModel.getItemSetting(req)
-        result.then((response: ItemsSetting) => res.send(response))
+        result.then((response: ItemsSetting[]) => res.send(response))
     }
 
     /**
@@ -33,7 +33,7 @@ export class SettingController {
      */
     getCompanySetting(req: Request, res: Response) {
         const result = settingModel.getCompanySetting(req)
-        result.then((response: CompanySetting) => res.send(response))
+        result.then((response: CompanySetting[]) => res.send(response))
     }
 
     /**
@@ -43,7 +43,7 @@ export class SettingController {
      */
     setCompanySetting(req: Request, res: Response) {
         const result = settingModel.setCompanySetting(req)
-        result.then((response: any )=> res.send(response))
+        result.then((response: any) => res.send(response))
     }
 
     /**
@@ -53,7 +53,7 @@ export class SettingController {
      */
     getItemsByCompanySetting(req: Request, res: Response) {
         const result = settingModel.getItemsByCompanySetting(req)
-        result.then((response: ItemsSetting) => res.send(response))
+        result.then((response: ItemsSetting[]) => res.send(response))
     }
 
     /**
@@ -73,7 +73,17 @@ export class SettingController {
  */
     getMenus(req: Request, res: Response) {
         const result = settingModel.getMenus(req)
-        result.then((response: ItemsSetting) => res.send(response))
+        result.then((response: Menu[]) => res.send(response))
+    }
+
+    /**
+    * 設定所有選單
+    * @param req 
+    * @param res 
+    */
+    setMenus(req: Request, res: Response) {
+        const result = settingModel.setMenus(req)
+        result.then((response: any) => res.send(response))
     }
 }
 

@@ -81,6 +81,17 @@ export class SettingModel {
         let asyncData = dataBase.get({ reference: reference }, formatResultFn);
         return asyncData;
     }
+
+   /**
+     * 儲存選單
+     * @param req 
+     */
+    public setMenus(req: any) {
+        let reference = db.collection('menus').doc('menu');
+        let asyncData = dataBase.put({ reference: reference, setParams: req.body });
+        return asyncData;
+    }
+
 }
 
 export const settingModel = new SettingModel();

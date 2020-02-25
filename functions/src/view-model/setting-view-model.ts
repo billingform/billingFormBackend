@@ -16,3 +16,11 @@ export interface ItemsByCompanyReq {
     id: string;
     items?: ItemsSetting[];
 }
+
+
+export interface Menu {
+    id:number;
+    name: string;
+    url: string;
+    remark?: string;
+}

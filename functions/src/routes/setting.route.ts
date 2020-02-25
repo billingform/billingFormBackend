@@ -19,6 +19,7 @@ class SettingRoute extends Route {
         this.router.put('/setItemSetting', this.settingController.setItemSetting);
         this.router.put('/setCompanySetting', this.settingController.setCompanySetting);
         this.router.put('/setItemsByCompanySetting', this.settingController.setItemsByCompanySetting);
+        this.router.put('/setMenus', this.settingController.setMenus);
     }
 }
 
