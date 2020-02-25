@@ -2,6 +2,8 @@ import { dataBase } from "../database/database";
 import { db } from "../database/db-setting";
 import { ItemsByCompanyReq } from "../view-model/setting-view-model";
 
+// var jwt = require('jsonwebtoken')
+
 export class SettingModel {
 
     constructor() { }
@@ -79,13 +81,20 @@ export class SettingModel {
         let reference = db.collection('menus').doc('menu');
         let formatResultFn = (result: any) => { result = result.menus; return result }
         let asyncData = dataBase.get({ reference: reference }, formatResultFn);
+        // const payload = {
+        //     user_id: 'user11',
+        //     user_name: 'user1',
+        //     user_email: 'user1@gmail.com'
+        // }
+        // const token = jwt.sign(payload, 'shhhhh');
+        // jwt.verify(token, 'shhhhh', (err: any, decoded: any) => {})
         return asyncData;
     }
 
-   /**
-     * 儲存選單
-     * @param req 
-     */
+    /**
+      * 儲存選單
+      * @param req 
+      */
     public setMenus(req: any) {
         let reference = db.collection('menus').doc('menu');
         let asyncData = dataBase.put({ reference: reference, setParams: req.body });
