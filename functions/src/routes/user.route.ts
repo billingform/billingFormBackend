@@ -13,7 +13,7 @@ class UserRoute extends Route {
     protected setRoutes() {
         this.router.get('/getAllAccounts', this.userController.getAllAccounts);
         this.router.put('/createAccount', this.userController.createAccount);
-        this.router.get('/login', this.userController.login);
+        this.router.post('/login', this.userController.login);
     }
 }
 
